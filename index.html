@@ -95,7 +95,8 @@
     /* Hero Section */
     #hero {
       min-height: 92vh;
-      background: linear-gradient(120deg, rgba(13, 110, 253, 0.25) 0%, rgba(191, 161, 107, 0.2) 100%), url(https://img1.wsimg.com/isteam/getty/1472621743/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true) center center / cover no-repeat;
+      background: linear-gradient(120deg, rgba(13, 110, 253, 0.18) 0%, rgba(191, 161, 107, 0.13) 100%), url(https://img1.wsimg.com/isteam/getty/1472621743/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true) center center / cover no-repeat;
+      background-attachment: scroll; /* Remove fixed for mobile issues */
       position: relative;
       color: var(--white);
       display: flex;
@@ -106,13 +107,12 @@
       border-radius: 0 0 32px 32px;
       box-shadow: 0 8px 32px var(--shadow-medium);
       overflow: hidden;
-      background-attachment: fixed;
     }
     #hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(34,48,74,0.35);
+      background: rgba(34,48,74,0.18); /* Lower opacity for better image visibility */
       z-index: 0;
     }
     #hero .content {
