@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dira Interiors - Premium Interior Design</title>
+
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/bfa16b/home.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    /* Global Variables - Improved color management */
+    :root {
+      --primary-gold: #bfa16b;
+      --primary-dark-blue: #232946;
+      --light-bg: #f7f8fa;
+      --white: #ffffff;
+      --text-dark: #222;
+      --text-medium: #444;
+      --text-light: #666;
+      --border-light: #e0e0e0;
+      --shadow-light: rgba(34, 48, 74, 0.07);
+      --shadow-medium: rgba(34, 48, 74, 0.13);
+      --shadow-strong: rgba(34, 48, 74, 0.18);
+      --footer-bg-color: #bfa16b; /* Updated Footer Color to primary gold */
+    }
+
+    /* Global Styles */
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--light-bg);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Accessibility focus outline */
+    *:focus-visible {
+      outline: 3px solid var(--primary-gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Custom utility class for primary-gold text color */
+    .text-primary-gold {
+      color: var(--primary-gold) !important;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--primary-gold) !important;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+    }
+    .navbar {
+      background: rgba(255, 255, 255, 0.98) !important;
+      box-shadow: 0 2px 16px var(--shadow-light);
+      border-bottom: 1.5px solid var(--border-light);
+      transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .navbar.scrolled {
+      background: var(--white) !important;
+      box-shadow: 0 4px 20px var(--shadow-medium);
+    }
+    .navbar-nav .nav-link {
+      color: var(--primary-dark-blue) !important;
+      font-weight: 500;
+      font-size: 1.08rem;
+      letter-spacing: 1.2px;
+      transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+      border-radius: 18px;
+      padding: 0.4rem 1.1rem;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+      color: var(--primary-gold) !important;
+      background: #fdfaf5;
+    }
+    .navbar-toggler {
+      border-color: rgba(0,0,0,0.1);
+    }
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    /* Hero Section */
+    #hero {
+      min-height: 92vh;
+      background: linear-gradient(120deg, rgba(13, 110, 253, 0.25) 0%, rgba(191, 161, 107, 0.2) 100%), url(https://img1.wsimg.com/isteam/getty/1472621743/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true) center center / cover no-repeat;
+      position: relative;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 8px 32px var(--shadow-medium);
+      overflow: hidden;
+      background-attachment: fixed;
+    }
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(34,48,74,0.35);
+      z-index: 0;
+    }
+    #hero .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      box-shadow: 0 6px 28px var(--shadow-medium);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    #hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      letter-spacing: 8px;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-gold);
+      text-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    #hero p {
+      font-size: 1.45rem;
+      font-weight: 400;
+      letter-spacing: 2.5px;
+      color: #fffbe6;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+    .hero-btn {
+      background: linear-gradient(90deg, var(--primary-gold) 0%, #fff2d2 100%);
+      color: var(--primary-dark-blue);
+      font-weight: 700;
+      padding: 1.1rem 2.8rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.25rem;
+      letter-spacing: 1.5px;
+      box-shadow: 0 4px 16px rgba(35,35,35,0.15);
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .hero-btn:hover {
+      background: var(--primary-dark-blue);
+      color: var(--primary-gold);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(35,35,35,0.25);
+    }
+    .hero-animate h1 {
+      opacity: 0;
+      transform: translateY(-30px) scale(0.98);
+      animation: heroTitleIn 1.1s 0.2s cubic-bezier(.4,0,.2,1) forwards;
+    }
+    .hero-animate p {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: heroSubIn 1.1s 0.7s cubic-bezier(.4,0,.2,1) forwards;
+    }
+    @keyframes heroTitleIn {
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes heroSubIn {
+      to { opacity: 1; transform: none; }
+    }
+
+    /* Section Titles */
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      font-size: 2.8rem;
+      text-align: center;
+      margin: 3.5rem 0 2.5rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 4px;
+      background: var(--primary-gold);
+      margin: 20px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    #about {
+      background: var(--white);
+      padding: 3.5rem 1.5rem;
+      border-radius: 24px;
+      box-shadow: 0 6px 28px var(--shadow-light);
+      max-width: 960px;
+      margin: 0 auto 5rem;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    #about p {
+      font-size: 1.2rem;
+      color: var(--text-medium);
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Carousel Images */
+    .carousel-item img {
+      height: 480px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+      transition: transform 0.3s ease-in-out;
+    }
+    .carousel-item img:hover {
+      transform: scale(1.01);
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: var(--primary-gold);
+      border-radius: 50%;
+      padding: 1.2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Services Section */
+    #services .card {
+      border: none;
+      border-radius: 22px;
+      box-shadow: 0 6px 28px rgb(191 161 107 / 0.15);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      background: var(--white);
+      overflow: hidden;
+      position: relative;
+    }
+    #services .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(191,161,107,0.05);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 22px;
+    }
+    #services .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 16px 40px rgb(191 161 107 / 0.25);
+    }
+    #services .card:hover::before {
+      opacity: 1;
+    }
+    #services .card-body {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    #services .card-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-gold);
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    #services .card-text {
+      font-size: 1.05rem;
+      color: var(--text-light);
+    }
+
+    /* Projects Section (Updated) */
+    #projects {
+      margin-bottom: 5rem;
+      background: var(--white);
+      padding: 4rem 1rem;
+      border-radius: 24px;
+      box-shadow: 0 6px 28px var(--shadow-light);
+    }
+    #projects .project-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 6px 28px var(--shadow-medium);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      display: flex; /* For flex-direction on small screens */
+      flex-direction: column; /* Stack image/video and text */
+    }
+    #projects .project-item:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 36px var(--shadow-strong);
+    }
+    #projects .project-content {
+      position: relative;
+      overflow: hidden;
+      background-color: #000; /* Ensures black background for videos */
+      height: 320px; /* Fixed height for consistency */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #projects .project-content img,
+    #projects .project-content video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease-in-out;
+    }
+    #projects .project-item:hover .project-content img,
+    #projects .project-item:hover .project-content video {
+      transform: scale(1.05);
+    }
+    #projects .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+      color: var(--white);
+      padding: 1.5rem;
+      transition: background 0.3s ease-in-out;
+      z-index: 1; /* Ensure overlay is above video controls */
+    }
+    #projects .project-item:hover .project-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%);
+    }
+    #projects .project-overlay h5 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary-gold);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    #projects .project-overlay p {
+      font-size: 1rem;
+      color: #e0e0e0;
+      margin-bottom: 0;
+    }
+    #projects .video-play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(191, 161, 107, 0.9); /* Gold background */
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2; /* Above video */
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    #projects .video-play-button:hover {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    #projects .video-play-button i {
+      color: var(--white); /* White play icon */
+      font-size: 2rem;
+      line-height: 1;
+      margin-left: 5px; /* Adjust for triangle shape */
+    }
+
+    /* Testimonials & Contact Combined Section */
+    #testimonials-contact-combined {
+      margin-bottom: 5rem;
+    }
+    #testimonials-contact-combined .row {
+      align-items: stretch;
+    }
+    #testimonials-contact-combined .col-lg-6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+    #testimonials-contact-combined .testimonial {
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 6px 28px rgb(191 161 107 / 0.15);
+      padding: 2.2rem 1.8rem;
+      margin: 1rem auto;
+      font-style: italic;
+      position: relative;
+      max-width: 580px;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    #testimonials-contact-combined .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgb(191 161 107 / 0.22);
+    }
+    #testimonials-contact-combined .testimonial::before {
+      content: '“';
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      color: var(--primary-gold);
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    #testimonials-contact-combined .testimonial p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--text-medium);
+      position: relative;
+      z-index: 1;
+    }
+    #testimonials-contact-combined .testimonial img {
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(191,161,107,0.13);
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--primary-gold);
+      padding: 2px;
+    }
+    #testimonials-contact-combined .author {
+      text-align: right;
+      font-weight: 600;
+      margin-top: 1rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+    #testimonials-contact-combined .carousel-inner {
+      min-height: unset;
+    }
+    #testimonials-contact-combined .carousel-control-prev,
+    #testimonials-contact-combined .carousel-control-next {
+      width: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: var(--white);
+      border-radius: 28px;
+      box-shadow: 0 8px 36px rgba(35,41,70,0.1), 0 2px 0 var(--border-light);
+      padding: 3rem 2.5rem;
+      margin: 0 auto;
+      max-width: 550px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .contact-card .divider-line {
+      height: 6px;
+      width: 80px;
+      background: linear-gradient(90deg, var(--primary-gold) 0%, #fff2d2 100%);
+      border-radius: 4px;
+      margin: 0 auto 2rem auto;
+    }
+    .contact-card h2 {
+      color: var(--primary-dark-blue);
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .contact-card p {
+      color: var(--text-medium);
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .contact-card .company-info {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary-gold);
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+    }
+    .contact-card .address-info {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-card .btn-whatsapp { /* Renamed for clarity */
+      background: #25d366;
+      border: none;
+      font-weight: 600;
+      padding: 0.8rem 1.8rem;
+      border-radius: 28px;
+      font-size: 1.05rem;
+      box-shadow: 0 2px 10px rgba(37,211,102,0.2);
+      transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      display: flex; /* Added for icon alignment */
+      align-items: center; /* Added for icon alignment */
+      justify-content: center; /* Added for icon alignment */
+      text-decoration: none; /* Ensure no underline */
+      color: var(--white); /* Ensure text color is white */
+    }
+    .contact-card .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(37,211,102,0.3);
+    }
+   .contact-card .btn-whatsapp i { /* Targeted <i> tag instead of <img> */
+      color: var(--white); /* Ensure the icon itself is white */
+      font-size: 22px; /* Set the size of the icon */
+      margin-right: 10px; /* Space between icon and text */
+    }
+    .contact-card .hours-info {
+      color: var(--primary-gold);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 1.8rem;
+    }
+
+    /* Footer (Updated) */
+    footer {
+      background: var(--footer-bg-color); /* Uses new variable */
+      color: var(--primary-dark-blue); /* Text color changed for contrast on gold */
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      box-shadow: 0 -4px 24px var(--shadow-light);
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    footer strong {
+      color: var(--primary-dark-blue); /* Adjusted for contrast */
+      font-weight: 700;
+    }
+    footer a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    /* --- Animations & Effects --- */
+    /* Reveal sections on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Floating Buttons: Chatbot Toggle and WhatsApp (BOTTOM RIGHT) */
+    /* These elements are positioned independently but aware of each other's space */
+
+    #whatsapp-fixed-btn {
+      position: fixed;
+      bottom: 24px; /* Default spacing from bottom */
+      right: 24px; /* Default spacing from right */
+      z-index: 1000; /* Ensure it's above content but below chatbot panel */
+      background: #25d366; /* WhatsApp green */
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.4);
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    #whatsapp-fixed-btn:hover {
+      background: #128C7E;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.5);
+    }
+
+    #chatbot-widget {
+      position: fixed;
+      /* Position the chatbot toggle button directly above the WhatsApp button */
+      bottom: calc(24px + 56px + 16px); /* WhatsApp button bottom + WhatsApp button height + desired gap */
+      right: 24px;
+      z-index: 1001; /* Higher than WhatsApp button */
+    }
+    #chatbot-toggle {
+      background: linear-gradient(90deg, var(--primary-gold) 0%, #fff2d2 100%);
+      color: var(--primary-dark-blue);
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0 6px 28px var(--shadow-medium), 0 0 0 0 var(--primary-gold);
+      animation: chatbotGlow 2.5s infinite alternate ease-in-out;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+    }
+    @keyframes chatbotGlow {
+      0% { box-shadow: 0 6px 28px var(--shadow-medium), 0 0 0 0 var(--primary-gold); }
+      100% { box-shadow: 0 8px 36px 10px rgba(191, 161, 107, 0.4), 0 0 0 12px rgba(255, 242, 210, 0.4); }
+    }
+    #chatbot-notify {
+      position: absolute; top: 8px; right: 8px; width: 12px; height: 12px; background: #ff3b3b; border-radius: 50%; border: 2px solid var(--white); z-index: 3; display: none;
+      animation: pulsateNotify 1.5s infinite;
+    }
+    @keyframes pulsateNotify {
+      0% { transform: scale(0.8); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(0.8); opacity: 0.8; }
+    }
+
+    #chatbot-panel {
+      display: none;
+      width: 360px; /* Base width */
+      height: 480px; /* Default height */
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 12px 40px var(--shadow-strong);
+      padding: 0;
+      overflow: hidden;
+      flex-direction: column;
+      position: fixed;
+      right: 24px; /* Align with toggle button */
+      /* Calculate position relative to the toggle button for the panel's bottom */
+      bottom: calc(24px + 56px + 16px + 56px + 16px); /* WhatsApp bottom + Whatsapp height + gap + Toggle height + another gap */
+      transform-origin: bottom right;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      z-index: 1002; /* Highest z-index for the panel when open */
+      /* Ensure panel doesn't go off-screen upwards */
+      max-height: calc(100vh - 80px); /* 100vh minus a safe top margin (e.g., 80px for navbar) */
+    }
+
+    #chatbot-panel.open {
+      display: flex;
+      transform: scale(1);
+      opacity: 1;
+      /* Dynamic adjustment for bottom position to ensure it stays in view */
+      /* This will be handled in JS for more accurate placement if it clashes with the top */
+    }
+
+    #chatbot-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--primary-dark-blue);
+      cursor: pointer;
+      z-index: 2;
+      line-height: 1;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Chatbot Message Styles */
+    #chatbot-messages {
+      flex: 1 1 auto;
+      padding: 1rem;
+      overflow-y: auto;
+      background: var(--light-bg);
+      font-size: 0.95rem;
+      max-height: calc(100% - 110px); /* Adjust based on header/footer in panel */
+      display: flex;
+      flex-direction: column;
+    }
+    .bot-message, .user-message {
+        padding: 0.85rem 1.1rem;
+        margin-bottom: 0.7rem;
+        line-height: 1.4;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        max-width: 80%;
+    }
+    .bot-message {
+      background-color: #eef3fb;
+      margin-right: auto;
+      align-self: flex-start;
+      border-radius: 12px 12px 12px 2px;
+    }
+    .user-message {
+      background-color: var(--primary-gold);
+      color: var(--white);
+      margin-left: auto;
+      align-self: flex-end;
+      border-radius: 12px 12px 2px 12px;
+    }
+    /* Chatbot Buttons */
+    .chat-button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0.5rem 0;
+      margin-right: auto;
+      max-width: 100%;
+    }
+    .chat-button {
+      background-color: var(--primary-gold);
+      color: var(--white);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background-color 0.2s, transform 0.1s;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+    .chat-button:hover {
+      background-color: var(--primary-dark-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .whatsapp-chat-button {
+      background-color: #25d366; /* WhatsApp green */
+      color: var(--white);
+      border: none;
+      padding: 12px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: background-color 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+    .whatsapp-chat-button:hover {
+      background-color: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    }
+    .whatsapp-chat-button img {
+      margin-right: 0;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Card & Button Micro-interactions */
+    .card, .hero-btn, .btn, #chatbot-toggle, #whatsapp-fixed-btn {
+      transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+    .btn:not(.card):hover, #chatbot-toggle:not(.card):hover, #whatsapp-fixed-btn:not(.card):hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(191,161,107,0.18);
+    }
+    
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 991.98px) {
+      .navbar-nav {
+        background: var(--white);
+        padding: 1rem 0;
+        border-radius: 12px;
+        margin-top: 1rem;
+        box-shadow: 0 4px 16px var(--shadow-light);
+      }
+      .navbar-nav .nav-link {
+        padding: 0.6rem 1.5rem;
+      }
+      #hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: 5px;
+      }
+      #hero p {
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+      }
+      .hero-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+      }
+      section h2 {
+        font-size: 2.2rem;
+        margin: 3rem 0 2rem;
+      }
+      #about {
+        padding: 2.5rem 1rem;
+        margin-bottom: 3rem;
+      }
+      #about p {
+        font-size: 1rem;
+      }
+      .carousel-item img {
+        height: 320px;
+      }
+      #services .card {
+        padding: 1.5rem 1rem;
+      }
+      #services .card-title {
+        font-size: 1.3rem;
+      }
+      /* Projects Section on Tablets */
+      #projects {
+        padding: 3rem 1rem;
+      }
+      #projects .project-content {
+        height: 280px;
+      }
+      #projects .project-overlay h5 {
+        font-size: 1.4rem;
+      }
+      #projects .project-overlay p {
+        font-size: 0.9rem;
+      }
+
+      #testimonials-contact-combined .row {
+        flex-direction: column-reverse !important;
+      }
+      #testimonials-contact-combined .col-lg-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+        min-height: unset;
+      }
+      #testimonials-contact-combined .contact-card {
+        margin-top: 3rem;
+        padding: 2.5rem 1.5rem;
+      }
+      #testimonials-contact-combined .testimonial {
+        padding: 1.8rem 1.2rem;
+        flex-direction: row;
+        align-items: center;
+        max-width: 100%;
+      }
+      #testimonials-contact-combined .testimonial::before {
+        font-size: 3.5rem;
+        top: -5px;
+        left: 10px;
+      }
+      #testimonials-contact-combined .testimonial img {
+        width: 60px;
+        height: 60px;
+      }
+      #testimonials-contact-combined .author {
+        text-align: right; /* Keep right aligned for row layout */
+        margin-top: 0; /* Adjust margin for row layout */
+        flex-grow: 1; /* Allow author to take space */
+      }
+      
+
+      /* Floating Buttons for Tablets */
+      #whatsapp-fixed-btn {
+        bottom: 20px; /* Adjusted for tablet */
+        right: 20px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+      }
+      #chatbot-widget {
+        bottom: calc(20px + 52px + 16px); /* Adjusted for tablet */
+        right: 20px;
+      }
+      #chatbot-toggle {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+      }
+      #chatbot-panel {
+        bottom: calc(20px + 52px + 16px + 52px + 16px); /* Adjusted for tablet */
+        right: 20px;
+        width: 320px;
+        max-height: calc(100vh - 60px); /* More conservative max-height for tablets */
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .navbar-brand {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+      }
+      #hero h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+      }
+      #hero p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+      }
+      .hero-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+      }
+      section h2 {
+        font-size: 1.8rem;
+        margin: 2.5rem 0 1.5rem;
+      }
+      section h2::after {
+        width: 60px;
+        height: 3px;
+        margin: 15px auto 0 auto;
+      }
+      #about {
+        padding: 2rem 0.8rem;
+        margin-bottom: 2.5rem;
+      }
+      #about p {
+        font-size: 0.95rem;
+      }
+      .carousel-item img {
+        height: 240px;
+        border-radius: 12px;
+      }
+      #services .card {
+        padding: 1rem 0.8rem;
+        border-radius: 16px;
+      }
+      #services .card-title {
+        font-size: 1.2rem;
+      }
+      /* Projects Section on Mobile */
+      #projects {
+        padding: 2.5rem 0.8rem;
+      }
+      #projects .project-content {
+        height: 200px;
+      }
+      #projects .project-overlay {
+        padding: 1rem;
+      }
+      #projects .project-overlay h5 {
+        font-size: 1.2rem;
+      }
+      #projects .project-overlay p {
+        font-size: 0.85rem;
+      }
+      #testimonials-contact-combined .testimonial {
+        padding: 1.2rem 0.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        border-radius: 16px;
+      }
+      #testimonials-contact-combined .testimonial::before {
+        font-size: 3rem;
+        top: -5px;
+        left: 8px;
+      }
+      #testimonials-contact-combined .testimonial img {
+        width: 50px;
+        height: 50px;
+      }
+      #testimonials-contact-combined .author {
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+      .contact-card {
+        padding: 2rem 1rem;
+        border-radius: 20px;
+      }
+      .contact-card h2 {
+        font-size: 1.8rem;
+      }
+      .contact-card p {
+        font-size: 1.0rem;
+        margin-bottom: 1.5rem;
+      }
+      .contact-card .btn-whatsapp { /* Renamed for clarity */
+        max-width: 100%;
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+      }
+
+      /* Floating Buttons for Mobile */
+      #whatsapp-fixed-btn { bottom: 16px; right: 16px; width: 48px; height: 48px; font-size: 1.4rem; }
+      #chatbot-widget {
+        bottom: calc(16px + 48px + 12px); /* Adjusted for mobile */
+        right: 16px;
+      }
+      #chatbot-toggle { width: 48px; height: 48px; font-size: 1.4rem; }
+      #chatbot-panel {
+        bottom: calc(16px + 48px + 12px + 48px + 12px); /* Adjusted for mobile */
+        right: 16px;
+        width: auto;
+        max-width: calc(100% - 32px);
+        max-height: calc(100vh - 60px); /* Consistent max-height for mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light px-4 py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DIRA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#residential">Residential</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#commercial">Commercial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#testimonials-contact-combined">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#testimonials-contact-combined">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="hero" class="hero-animate">
+  <div class="content reveal">
+    <h1>Dira Interiors</h1>
+    <p>Revolutionizing Interior Designs with AI-Powered Creativity for Residential & Commercial Spaces in India</p>
+    <a href="#testimonials-contact-combined" class="hero-btn">Get a Free Consultation</a>
+  </div>
+</header>
+
+<section id="about" class="container my-5 reveal">
+  <h2>About Us</h2>
+  <p class="text-center">
+    At Dira Interiors, we blend creativity, elegance, and functionality to deliver stunning interior designs
+    tailored for Indian homes and commercial spaces. Our expert designers, powered by advanced AI design tools,
+    work closely with you to bring your vision to life, creating timeless spaces that inspire comfort, productivity,
+    and luxury. We leverage cutting-edge artificial intelligence to analyze trends, optimize layouts, and visualize
+    concepts with unparalleled precision, ensuring innovative and personalized solutions. We are committed
+    to delivering exceptional quality and unparalleled client satisfaction, from conceptualization to the final touches.
+  </p>
+</section>
+
+<section id="residential" class="container my-5 reveal">
+  <h2>Residential Designs</h2>
+  <div id="residentialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" aria-label="Residential Interior Designs">
+    <div class="carousel-inner rounded-4 shadow-lg">
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?_gl=1*1vjle39*_ga*MTc0MjQ0MjExMy4xNzUzODc2ODY*_ga_8JE65Q40S6*czE3NTM1ODc3MzAkajE2JGwwJGgw" class="d-block w-100" alt="Modern Living Room with stylish furniture and warm lighting.">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?_gl=1*dn74lb*_ga*MTc0MjQ0MjExMy4xNzUzNTg3Njg2*_ga_8JE65Q40S6*czE3NTM1ODc2ODYkbzEkZzEkdDE3NTM1ODgwOTMkajE0JGwwJGgw" class="d-block w-100" alt="Cozy Bedroom Interior with soft textures and ample natural light.">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?_gl=1*dn74lb*_ga*MTc0MjQ0MjExMy4xNzUzNTg3Njg2*_ga_8JE65Q40S6*czE3NTM1ODc2ODYkbzEkZzEkdDE3NTM1ODgwOTMkajE0JGwwJGgw" class="d-block w-100" alt="Elegant Kitchen Design with modern appliances and a spacious island.">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#residentialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#residentialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<section id="commercial" class="container my-5 reveal">
+  <h2>Commercial Spaces</h2>
+  <div id="commercialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500" aria-label="Commercial Interior Designs">
+    <div class="carousel-inner rounded-4 shadow-lg">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=M3w5MTk4fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlJTIwc3BhY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Modern Office Space with open plan and ergonomic design.">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1604328702728-d26d2062c20b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Chic Restaurant Interior with contemporary decor and inviting ambiance.">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1715593947958-ee0ca51de552?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Luxury Hotel Lobby with grand design and elegant furnishings.">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#commercialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#commercialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<section id="services" class="container my-5 reveal">
+  <h2>Our Services</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-palette-fill text-primary-gold mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title">Custom Interior Design</h5>
+          <p class="card-text">Tailored interior concepts that reflect your unique style and needs, bringing your dream space to life.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-grid-fill text-primary-gold mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title">Space Planning & Layouts</h5>
+          <p class="card-text">Optimized layouts to maximize functionality, flow, and aesthetic appeal for any space, large or small.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-box-seam-fill text-primary-gold mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title">Furniture & Decor Selection</h5>
+          <p class="card-text">Curated furniture, lighting, and décor choices for perfect harmony, elegance, and comfort in your interiors.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-journal-check text-primary-gold mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title">End-to-End Project Management</h5>
+          <p class="card-text">Seamless coordination and supervision from initial concept and design to final installation and completion.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-binoculars-fill text-primary-gold mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title">Advanced 3D Visualization</h5>
+          <p class="card-text">Realistic 3D renderings and virtual walkthroughs to help you visualize every detail of your transformed space.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <i class="bi bi-tools text-primary-gold mb-3" style="font-size: 2.5rem;"></i>
+          <h5 class="card-title">Renovation & Remodeling Consulting</h5>
+          <p class="card-text">Expert advice and guidance to enhance, modernize, and sustainably upgrade your existing interiors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="container my-5 reveal">
+  <h2>Our Premium Projects</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col">
+      <div class="project-item">
+        <div class="project-content">
+          <video autoplay muted loop playsinline preload="metadata" poster="./videos/urban-oasis-poster.jpg" class="d-block w-100 h-100">
+            <source src="./10959786-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        <div class="project-overlay">
+          <h5>Lakshmi Nivas</h5>
+          <p>A contemporary living space designed for comfort and style in Gachibowli.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="project-item">
+        <div class="project-content">
+          <video autoplay muted loop playsinline preload="metadata" poster="./videos/office-poster.jpg" class="d-block w-100 h-100">
+            <source src="./7578546-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        <div class="project-overlay">
+          <h5>Serenity Heights</h5>
+          <p>Innovative Villa in Banglore.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="project-item">
+        <div class="project-content">
+          <video autoplay muted loop playsinline preload="metadata" poster="./videos/serenity-villa-poster.jpg" class="d-block w-100 h-100">
+            <source src="./7578547-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        <div class="project-overlay">
+          <h5>Northstar Allura</h5>
+          <p>Luxurious bedroom design with a serene ambiance for a private residence in Kokapet.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="project-item">
+        <div class="project-content">
+          <video autoplay muted loop playsinline preload="metadata" poster="./videos/retail-poster.jpg" class="d-block w-100 h-100">
+            <source src="./7578554-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        <div class="project-overlay">
+          <h5>The Fashion Hub Boutique</h5>
+          <p>Trendy and inviting retail space design for a fashion boutique in Banajarhills.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="project-item">
+        <div class="project-content">
+          <video autoplay muted loop playsinline preload="metadata" poster="./videos/family-dining-poster.jpg" class="d-block w-100 h-100">
+            <source src="./5498709-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        <div class="project-overlay">
+          <h5>Family Grand Dining</h5>
+          <p>An expansive and elegant dining area, perfect for family gatherings in Chennai.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="project-item">
+        <div class="project-content">
+          <video autoplay muted loop playsinline preload="metadata" poster="./videos/productivity-nook-poster.jpg" class="d-block w-100 h-100">
+            <source src="./5744424-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        <div class="project-overlay">
+          <h5>Aparna Nivas</h5>
+          <p>A contemporary duplex home in Banajarhills.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5" id="testimonials-contact-combined">
+  <div class="row align-items-stretch g-5 flex-lg-row flex-column-reverse">
+    <div class="col-lg-6 d-flex reveal">
+      <div class="d-flex flex-column justify-content-center flex-grow-1 h-100">
+        <h2 class="mb-4 text-center">What Our Clients Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Client Meera S." class="rounded-circle">
+                <div>
+                  <p class="mb-1">“Dira Interiors turned our apartment into a modern sanctuary. The team was attentive, creative, and always professional, exceeding all our expectations.”</p>
+                  <div class="author small text-end">— Meera S., Pune</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Client Rohan & Team" class="rounded-circle">
+                <div>
+                  <p class="mb-1">“We loved the 3D visualizations and the seamless execution. Our new office is not only functional but also incredibly beautiful and inspiring!”</p>
+                  <div class="author small text-end">— Rohan & Team, Hyderabad</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Client Priya K." class="rounded-circle">
+                <div>
+                  <p class="mb-1">“From concept to completion, Dira Interiors exceeded our expectations in every aspect. Highly recommended for truly luxury interiors.”</p>
+                  <div class="author small text-end">— Priya K., Delhi</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Client Aman" class="rounded-circle">
+                <div>
+                  <p class="mb-1">“The renovation consulting was spot on. Our restaurant now has a unique and inviting vibe that our guests absolutely adore.”</p>
+                  <div class="author small text-end">— Aman, Bengaluru</div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Client Kavita & Arjun" class="rounded-circle">
+                <div>
+                  <p class="mb-1">“Dira’s designers are true professionals. They listened to our needs and delivered a home that feels uniquely ours, a perfect reflection of our style.”</p>
+                  <div class="author small text-end">— Kavita & Arjun, Mumbai</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 d-flex reveal">
+      <div class="contact-card flex-grow-1 mx-auto">
+        <div class="divider-line"></div>
+        <h2 class="mb-3">Connect With Us</h2>
+        <p class="text-center mb-3">Better yet, see us in person! Visit us during our business hours—we’d love to connect and explore your design ideas together. We're ready to make your vision a reality.</p>
+        <div class="company-info">DIRA INTERIORS</div>
+        <div class="address-info mb-4">Hyderabad, Telangana, India</div>
+
+        <div class="d-flex flex-column gap-3 align-items-center w-100 mb-4">
+            <a href="https://wa.me/917989527038?text=Hello%20Dira%20Interiors,%20I'd%20like%20to%20inquire%20about%20your%20residential%20design%20services." class="btn btn-whatsapp w-75">
+                <i class="bi bi-whatsapp"></i> +91-7989527038
+            </a>
+            <a href="https://wa.me/917075327038?text=Hello%20Dira%20Interiors,%20I'd%20like%20to%20inquire%20about%20your%20commercial%20design%20services." class="btn btn-whatsapp w-75">
+                <i class="bi bi-whatsapp"></i> +91-7075327038
+            </a>
+        </div>
+        <div class="hours-info">
+          <i class="bi bi-clock-fill me-2"></i>Mon-Sat, 10am–7pm
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="chatbot-widget">
+  <button id="chatbot-toggle" aria-label="Open chat" type="button">
+    💬
+    <span id="chatbot-notify"></span>
+  </button>
+  <div id="chatbot-panel">
+    <button id="chatbot-close" aria-label="Close chat" type="button">&times;</button>
+    <div style="background: linear-gradient(90deg, var(--primary-gold) 0%, #fff2d2 100%); color: var(--primary-dark-blue); padding: 1.2rem; font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05);">DiraBot – Your Interior Design Assistant</div>
+    <div id="chatbot-messages">
+      <div class="bot-message mb-2">
+        Hello! I'm DiraBot, your AI interior design assistant. How can I help you today?
+      </div>
+    </div>
+    <form id="chatbot-form" autocomplete="off" style="display: flex; border-top: 1px solid var(--border-light); background: var(--white);">
+      <input id="chatbot-input" type="text" placeholder="Type your message..." autocomplete="off" style="flex: 1 1 auto; border: none; padding: 1rem; font-size: 1rem; outline: none; background: #fff; border-radius: 0 0 0 18px;" />
+      <button type="submit" aria-label="Send message" style="background: var(--primary-gold); color: var(--white); border: none; padding: 0 1.5rem; font-size: 1.3rem; border-radius: 0 0 18px 0; cursor: pointer; transition: background-color 0.2s ease-in-out;">➤</button>
+    </form>
+  </div>
+</div>
+
+<a href="https://wa.me/917989527038" target="_blank" id="whatsapp-fixed-btn" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<footer>
+  <p>&copy; 2025 Dira Interiors. Crafted with <i class="bi bi-heart-fill" style="color: #ff6b6b;"></i> in India.<br>
+  <span style="font-size:0.9rem; color:var(--primary-dark-blue);">Designed & Developed by <a href="http://aihumanmind.com" target="_blank" style="color: inherit; text-decoration: underline;"><strong>aihumanmind.com</strong></a></span></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Navbar background on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Reveal sections on scroll
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealElements.forEach(element => {
+    observer.observe(element);
+  });
+
+  // Chatbot Logic
+  window.addEventListener('DOMContentLoaded', function() {
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotPanel = document.getElementById('chatbot-panel');
+    const chatbotForm = document.getElementById('chatbot-form');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotNotify = document.getElementById('chatbot-notify');
+    const whatsappFixedBtn = document.getElementById('whatsapp-fixed-btn');
+
+
+    let isChatbotOpen = false;
+
+    // Function to calculate and set chatbot panel position
+    function setChatbotPanelPosition() {
+        if (!isChatbotOpen) return;
+
+        const toggleRect = chatbotToggle.getBoundingClientRect();
+        const panelRect = chatbotPanel.getBoundingClientRect();
+        const navbarHeight = navbar.offsetHeight || 60; // Get actual navbar height or use a default
+
+        let calculatedBottom = (window.innerHeight - toggleRect.top) + toggleRect.height + 16; // 16px gap below toggle
+        let calculatedMaxHeight = window.innerHeight - navbarHeight - 32; // 32px general top/bottom margin
+
+        // Ensure the panel doesn't go off-screen upwards
+        // If calculated top (viewportHeight - calculatedBottom - panelHeight) is less than navbarHeight + margin
+        // Adjust calculatedBottom to move the panel down, respecting max-height
+        if (window.innerHeight - calculatedBottom - panelRect.height < navbarHeight + 10) { // 10px buffer
+            calculatedBottom = window.innerHeight - (navbarHeight + 10) - panelRect.height;
+            // Also ensure it doesn't go below the page fold
+            if (calculatedBottom < 24) { // Minimum 24px from bottom if it's too tall
+                calculatedBottom = 24;
+            }
+        }
+        
+        chatbotPanel.style.bottom = `${calculatedBottom}px`;
+        chatbotPanel.style.maxHeight = `${calculatedMaxHeight}px`;
+
+        // Ensure messages scroll to bottom when panel opens or new messages added
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+
+    function toggleChatbot() {
+      isChatbotOpen = !isChatbotOpen;
+      if (isChatbotOpen) {
+        chatbotPanel.classList.add('open');
+        setTimeout(() => {
+          chatbotNotify.style.display = 'none';
+          chatbotInput.focus();
+          setChatbotPanelPosition(); // Set position immediately upon opening
+
+          // Add initial buttons if not already present
+          if (chatbotMessages.children.length === 1 && chatbotMessages.querySelector('.bot-message')) { // Only initial bot message
+            addChatbotButtons([
+              { text: "Tell me about your services", value: "services" },
+              { text: "What are your recent projects?", value: "projects" },
+              { text: "How can I contact you?", value: "contact" }
+            ]);
+          }
+        }, 10);
+      } else {
+        chatbotPanel.classList.remove('open');
+      }
+    }
+
+    chatbotToggle.addEventListener('click', toggleChatbot);
+    chatbotClose.addEventListener('click', toggleChatbot);
+
+    // Recalculate position on window resize
+    window.addEventListener('resize', setChatbotPanelPosition);
+
+
+    function addMessage(sender, message) {
+      const msgDiv = document.createElement('div');
+      msgDiv.classList.add('mb-2'); // Consistent margin bottom for messages
+
+      if (sender === 'user') {
+        msgDiv.classList.add('user-message');
+      }
+      else {
+        msgDiv.classList.add('bot-message');
+      }
+      msgDiv.textContent = message;
+      chatbotMessages.appendChild(msgDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      setChatbotPanelPosition(); // Recalculate position after adding message
+    }
+
+    function addChatbotButtons(buttonsConfig) {
+      const buttonContainer = document.createElement('div');
+      buttonContainer.classList.add('bot-message', 'chat-button-container');
+      
+      buttonsConfig.forEach(button => {
+        const btn = document.createElement('button');
+        btn.classList.add('chat-button');
+        btn.textContent = button.text;
+        btn.dataset.value = button.value || button.text;
+        btn.addEventListener('click', () => {
+          chatbotInput.value = btn.dataset.value;
+          chatbotForm.dispatchEvent(new Event('submit'));
+        });
+        buttonContainer.appendChild(btn);
+      });
+      chatbotMessages.appendChild(buttonContainer);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      setChatbotPanelPosition(); // Recalculate position after adding buttons
+    }
+
+    function addWhatsAppButtonInChat() {
+      const whatsappBtnDiv = document.createElement('div');
+      whatsappBtnDiv.classList.add('bot-message');
+      
+      const whatsappBtn = document.createElement('a');
+      whatsappBtn.href = "https://wa.me/917989527038?text=Hello%20Dira%20Interiors,%20I'd%20like%20to%20inquire%20about%20your%20services.";
+      whatsappBtn.target = "_blank";
+      whatsappBtn.classList.add('whatsapp-chat-button');
+      whatsappBtn.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="22" height="22"> Chat on WhatsApp`;
+
+      whatsappBtnDiv.appendChild(whatsappBtn);
+      chatbotMessages.appendChild(whatsappBtnDiv);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      setChatbotPanelPosition(); // Recalculate position after adding button
+    }
+
+    async function getChatbotResponse(message) {
+      await new Promise(resolve => setTimeout(resolve, 800));
+
+      const lowerMessage = message.toLowerCase();
+      let response = "";
+      let showInitialButtons = false;
+      let showWhatsAppButton = false;
+
+      if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+        response = "Hello there! I'm DiraBot, your AI interior design assistant. How can I help you create your dream space today?";
+        showInitialButtons = true;
+      } else if (lowerMessage.includes('services')) {
+        response = "Dira Interiors offers Custom Interior Design, Space Planning, Furniture Selection, Project Management, 3D Visualization, and Renovation Consulting. We use AI to enhance creativity and efficiency in all our services! Which one interests you most?";
+        addChatbotButtons([
+          { text: "Custom Design", value: "custom design" },
+          { text: "Space Planning", value: "space planning" },
+          { text: "3D Visualization", value: "3d visualization" }
+        ]);
+      } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach out') || lowerMessage.includes('get in touch')) {
+        response = "You can reach us via WhatsApp at +91-7989527038 or +91-7075327038. We are open Mon-Sat, 10am–7pm. Feel free to visit us in Hyderabad, Telangana!";
+        showWhatsAppButton = true;
+      } else if (lowerMessage.includes('residential')) {
+        response = "We specialize in creating beautiful and functional residential designs, from modern living rooms to cozy bedrooms and elegant kitchens. Our AI tools help us craft personalized spaces for every home. Explore our 'Residential Designs' section for examples!";
+      } else if (lowerMessage.includes('commercial')) {
+        response = "For commercial spaces, we design modern offices, chic restaurants, luxury hotel lobbies, and more. Our AI-driven approach ensures environments that enhance productivity and impress clients.";
+      } else if (lowerMessage.includes('cost') || lowerMessage.includes('price') || lowerMessage.includes('quote')) {
+        response = "Our pricing, optimized by AI-powered estimations, varies based on project scope and specific requirements. We'd love to offer you a free consultation to understand your needs and provide a tailored quote. Would you like to schedule one?";
+        addChatbotButtons([
+          { text: "Schedule a consultation" }
+        ]);
+      } else if (lowerMessage.includes('project') || lowerMessage.includes('portfolio') || lowerMessage.includes('work')) {
+        response = "Our 'Recent Projects' section showcases some of our best work across various styles and types, including images and even videos to give you a detailed look at our AI-enhanced designs!";
+      } else if (lowerMessage.includes('ai') || lowerMessage.includes('artificial intelligence')) {
+        response = "At Dira Interiors, we integrate AI into our design process for advanced trend analysis, efficient space planning, and hyper-realistic 3D visualizations. This allows us to deliver innovative and highly personalized interiors faster and more effectively!";
+        showInitialButtons = true;
+      }
+      else if (lowerMessage.includes('thank')) {
+        response = "You're welcome! Is there anything else I can assist you with?";
+        showInitialButtons = true;
+      } else {
+        response = "I'm still learning, but I can help with questions about our services, contact info, and design types. Could you rephrase your question?";
+        showInitialButtons = true;
+      }
+
+      addMessage('bot', response);
+      if (showWhatsAppButton) {
+        addWhatsAppButtonInChat();
+      }
+      if (showInitialButtons) {
+        addChatbotButtons([
+          { text: "Our Services", value: "services" },
+          { text: "Contact Us", value: "contact" },
+          { text: "Recent Projects", value: "projects" }
+        ]);
+      }
+    }
+
+    chatbotForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const userMessage = chatbotInput.value.trim();
+      if (userMessage) {
+        addMessage('user', userMessage);
+        chatbotInput.value = ''; // Clear input immediately
+        await getChatbotResponse(userMessage); // Await the response
+      }
+    });
+
+    // Project video play/pause logic
+    document.querySelectorAll('.project-item').forEach(item => {
+      const video = item.querySelector('video');
+      const playButton = item.querySelector('.video-play-button');
+
+      if (video && playButton) {
+        // Hide overlay and show controls on play, pause on end
+        video.addEventListener('play', () => {
+          playButton.style.display = 'none';
+        });
+        video.addEventListener('pause', () => {
+          playButton.style.display = 'flex';
+        });
+        video.addEventListener('ended', () => {
+          video.currentTime = 0; // Rewind to start
+          video.pause();
+          playButton.style.display = 'flex';
+        });
+
+        playButton.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+
+        // Pause video if it goes out of view
+        const videoObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting && !video.paused) {
+              video.pause();
+            }
+          });
+        }, { threshold: 0.5 }); // Pause if more than 50% is out of view
+
+        videoObserver.observe(video);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
